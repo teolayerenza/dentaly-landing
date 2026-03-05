@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-bg: #070D14;
+    --brand-primary: #005B7F;
+    --brand-accent: #F5A623;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    color: #1a2530;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(0, 91, 127, 0.3); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(0, 91, 127, 0.5); }
+
+  /* Selection */
+  ::selection { background: rgba(0, 91, 127, 0.25); color: inherit; }
+}
+
+@layer utilities {
+  /* Shimmer animation for ShimmerText */
+  .animate-shimmer-text {
+    background-image: linear-gradient(
+      110deg,
+      #4DA0A0 0%,
+      #4DA0A0 35%,
+      #a8e6e6 45%,
+      #ffffff 50%,
+      #a8e6e6 55%,
+      #4DA0A0 65%,
+      #4DA0A0 100%
+    );
+    background-size: 250% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s linear infinite;
+  }
+
+  /* Blur + fade used by BlurReveal */
+  .reveal-hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(4px);
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+
+  /* Glass card */
+  .glass {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Brand glow */
+  .glow-primary {
+    box-shadow: 0 0 32px 4px rgba(0, 91, 127, 0.35);
+  }
+
+  /* Section padding standard */
+  .section-pad {
+    @apply py-20 lg:py-28;
+  }
+}
