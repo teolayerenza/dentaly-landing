@@ -45,8 +45,8 @@ const PLANS: PricingPlan[] = [
     id: 'pro',
     name: 'Pro',
     badge: 'Más popular',
-    monthlyPrice: 20000,
-    annualMonthlyPrice: 16600,
+    monthlyPrice: 24000,
+    annualMonthlyPrice: 20000,
     description: 'Para clínicas que quieren crecer sin límites.',
     cta: 'Solicitar demo',
     ctaVariant: 'primary',
@@ -72,7 +72,7 @@ interface PricingProps {
 
 export function Pricing({ onDemoClick }: PricingProps) {
   const { ref, inView } = useInView<HTMLDivElement>(0.1);
-  const [annual, setAnnual] = useState(false);
+  const [annual, setAnnual] = useState(true);
 
   return (
     <section id="precios" className="section-pad bg-brand-light">
@@ -110,7 +110,7 @@ export function Pricing({ onDemoClick }: PricingProps) {
             >
               Anual
               <span className="text-[10px] bg-brand-accent/20 text-brand-accent font-bold px-1.5 py-0.5 rounded-full">
-                −17%
+                2 meses gratis
               </span>
             </button>
           </div>
@@ -228,9 +228,11 @@ function PlanCard({
           )}
         </div>
 
-        {annual && plan.monthlyPrice !== null && (
+        {plan.monthlyPrice !== null && (
           <p className={cn('text-xs', plan.highlighted ? 'text-white/60' : 'text-gray-400')}>
-            Facturado anualmente · ahorrás 2 meses
+            {annual
+              ? 'Facturado anualmente · $240.000/año'
+              : 'Pagando anual ahorrás 2 meses'}
           </p>
         )}
 

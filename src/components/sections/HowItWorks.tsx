@@ -49,10 +49,7 @@ export function HowItWorks() {
         </BlurReveal>
 
         {/* Steps */}
-        <div className="relative">
-          {/* Connecting line (desktop) */}
-          <div className="hidden lg:block absolute top-[42px] left-[calc(16.66%+40px)] right-[calc(16.66%+40px)] h-px bg-gradient-to-r from-brand-primary/20 via-brand-primary/60 to-brand-primary/20" />
-
+        <div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             {STEPS.map((step, i) => (
               <BlurReveal key={step.number} inView={inView} delay={100 + i * 150}>
