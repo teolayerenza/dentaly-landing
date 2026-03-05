@@ -94,7 +94,7 @@ export function FAQ() {
           <p className="text-gray-500 text-sm">
             ¿Tenés alguna otra pregunta?{' '}
             <a
-              href="https://wa.me/5491100000000?text=Hola%2C+tengo+una+consulta+sobre+Dentaly"
+              href="https://wa.me/5492213033623?text=Hola%2C+tengo+una+consulta+sobre+Dentaly"
               target="_blank"
               rel="noopener noreferrer"
               className="text-brand-primary font-medium hover:underline"
