@@ -73,6 +73,16 @@ export default {
           '0%, 100%': { boxShadow: '0 0 0 0 rgba(0,91,127,0)' },
           '50%':      { boxShadow: '0 0 24px 4px rgba(0,91,127,0.4)' },
         },
+        /* Text roll exit: slides up + blurs to invisible (AnimatedText) */
+        'text-out': {
+          '0%':   { opacity: '1', transform: 'translateY(0)',     filter: 'blur(0px)' },
+          '100%': { opacity: '0', transform: 'translateY(-45%)',  filter: 'blur(6px)' },
+        },
+        /* Text roll enter: reveals upward from below with blur (AnimatedText) */
+        'text-in': {
+          '0%':   { opacity: '0', transform: 'translateY(45%)',   filter: 'blur(6px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)',     filter: 'blur(0px)' },
+        },
         /* Price slot-machine roll (AnimatedNumber) */
         'price-in': {
           '0%':   { opacity: '0', transform: 'translateY(55%) scale(0.75)', filter: 'blur(8px)' },
@@ -99,6 +109,8 @@ export default {
         'spin-very-slow': 'spin-very-slow 40s linear infinite',
         'fade-up':        'fade-up 0.6s ease-out both',
         'pulse-glow':     'pulse-glow 2.5s ease-in-out infinite',
+        'text-out':       'text-out 0.18s ease-in both',
+        'text-in':        'text-in  0.28s ease-out both',
         'price-in':       'price-in 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both',
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up':   'accordion-up 0.2s ease-out',

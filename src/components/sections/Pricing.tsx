@@ -3,6 +3,7 @@ import { Check, X, Zap } from 'lucide-react';
 import { BlurReveal } from '@/components/ui/blur-reveal';
 import { FlowButton } from '@/components/ui/flow-button';
 import { AnimatedNumber } from '@/components/ui/animated-number';
+import { AnimatedText } from '@/components/ui/animated-text';
 import { useInView } from '@/hooks/useInView';
 import { cn } from '@/lib/utils';
 
@@ -229,11 +230,14 @@ function PlanCard({
         </div>
 
         {plan.monthlyPrice !== null && (
-          <p className={cn('text-xs', plan.highlighted ? 'text-white/60' : 'text-gray-400')}>
-            {annual
-              ? 'Facturado anualmente · $240.000/año'
-              : 'Pagando anual ahorrás 2 meses'}
-          </p>
+          <div className="overflow-hidden">
+            <AnimatedText
+              value={annual
+                ? 'Facturado anualmente · $240.000/año'
+                : 'Pagando anual ahorrás 2 meses'}
+              className={cn('text-xs', plan.highlighted ? 'text-white/60' : 'text-gray-400')}
+            />
+          </div>
         )}
 
         <p className={cn('text-sm mt-2', plan.highlighted ? 'text-white/70' : 'text-gray-500')}>
