@@ -73,6 +73,12 @@ export default {
           '0%, 100%': { boxShadow: '0 0 0 0 rgba(0,91,127,0)' },
           '50%':      { boxShadow: '0 0 24px 4px rgba(0,91,127,0.4)' },
         },
+        /* Price slot-machine roll (AnimatedNumber) */
+        'price-in': {
+          '0%':   { opacity: '0', transform: 'translateY(55%) scale(0.75)', filter: 'blur(8px)' },
+          '60%':  { filter: 'blur(0px)' },
+          '100%': { opacity: '1', transform: 'translateY(0) scale(1)',    filter: 'blur(0px)' },
+        },
         /* Accordion */
         'accordion-down': {
           from: { height: '0' },
@@ -93,6 +99,7 @@ export default {
         'spin-very-slow': 'spin-very-slow 40s linear infinite',
         'fade-up':        'fade-up 0.6s ease-out both',
         'pulse-glow':     'pulse-glow 2.5s ease-in-out infinite',
+        'price-in':       'price-in 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both',
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up':   'accordion-up 0.2s ease-out',
       },

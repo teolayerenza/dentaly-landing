@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Check, X, Zap } from 'lucide-react';
 import { BlurReveal } from '@/components/ui/blur-reveal';
 import { FlowButton } from '@/components/ui/flow-button';
+import { AnimatedNumber } from '@/components/ui/animated-number';
 import { useInView } from '@/hooks/useInView';
 import { cn } from '@/lib/utils';
 
@@ -213,14 +214,13 @@ function PlanCard({
               <span className={cn('text-sm font-medium mb-3', plan.highlighted ? 'text-white/60' : 'text-gray-400')}>
                 $
               </span>
-              <span
+              <AnimatedNumber
+                value={displayPrice.toLocaleString('es-AR')}
                 className={cn(
                   'font-display font-extrabold text-4xl tabular-nums',
                   plan.highlighted ? 'text-white' : 'text-gray-900'
                 )}
-              >
-                {displayPrice.toLocaleString('es-AR')}
-              </span>
+              />
               <span className={cn('text-sm mb-1.5', plan.highlighted ? 'text-white/60' : 'text-gray-400')}>
                 ARS/mes
               </span>
