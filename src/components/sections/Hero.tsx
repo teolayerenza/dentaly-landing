@@ -147,10 +147,11 @@ export function Hero({ onDemoClick }: HeroProps) {
                 {/* Screenshot */}
                 <img
                   src={screenshotDashboard}
-                  alt="Panel de control de Dentaly"
+                  alt="Panel de control de Dentaly — software odontológico"
                   className="w-full block"
                   loading="eager"
                   decoding="async"
+                  fetchPriority="high"
                 />
               </div>
             </div>

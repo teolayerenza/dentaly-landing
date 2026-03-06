@@ -2,21 +2,194 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO -->
-    <title>Dentaly — El software dental que tu clínica merece</title>
-    <meta name="description" content="Gestioná turnos, pacientes, finanzas e inventario desde cualquier dispositivo. Sin instalaciones, sin complicaciones. Hecho para clínicas argentinas." />
-    <meta name="keywords" content="software dental, gestión clínica dental, agenda odontológica, sistema dental Argentina, administración consultorio dental" />
+    <!-- ── Favicons ──────────────────────────────────────────── -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Dentaly — El software dental que tu clínica merece" />
-    <meta property="og:description" content="Gestioná turnos, pacientes, finanzas e inventario desde cualquier dispositivo." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://dentaly.com.ar" />
+    <!-- ── SEO primario ──────────────────────────────────────── -->
+    <title>Dentaly | Software Odontológico para Clínicas Argentinas</title>
+    <meta
+      name="description"
+      content="Software odontológico 100% web para clínicas dentales argentinas. Gestioná turnos, fichas de pacientes, odontograma digital, finanzas e inventario. Plan gratuito disponible. Sin instalaciones."
+    />
+    <meta
+      name="keywords"
+      content="software odontológico, software dental Argentina, gestión clínica dental, agenda odontológica online, sistema dental web, administración consultorio dental, odontograma digital, alternativa Bilog"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://dentaly.com.ar/" />
 
-    <!-- Fonts -->
+    <!-- ── Open Graph (Facebook, WhatsApp, LinkedIn) ─────────── -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:url"         content="https://dentaly.com.ar/" />
+    <meta property="og:site_name"   content="Dentaly" />
+    <meta property="og:locale"      content="es_AR" />
+    <meta property="og:title"       content="Dentaly | Software Odontológico para Clínicas Argentinas" />
+    <meta
+      property="og:description"
+      content="Gestioná turnos, pacientes, finanzas e inventario desde cualquier dispositivo. Hecho para clínicas argentinas. Plan gratuito disponible."
+    />
+    <meta property="og:image"       content="https://dentaly.com.ar/og-image.png" />
+    <meta property="og:image:width"  content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt"   content="Dentaly — Software odontológico para clínicas argentinas" />
+
+    <!-- ── Twitter / X Card ─────────────────────────────────── -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="Dentaly | Software Odontológico para Clínicas Argentinas" />
+    <meta
+      name="twitter:description"
+      content="Gestioná turnos, pacientes, finanzas e inventario desde cualquier dispositivo. Plan gratuito disponible."
+    />
+    <meta name="twitter:image"       content="https://dentaly.com.ar/og-image.png" />
+
+    <!-- ── Structured Data (JSON-LD) ────────────────────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://dentaly.com.ar/#organization",
+          "name": "Dentaly",
+          "url": "https://dentaly.com.ar",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://dentaly.com.ar/favicon.svg"
+          },
+          "description": "Software odontológico 100% web para clínicas dentales argentinas.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "AR"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "availableLanguage": "Spanish"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://dentaly.com.ar/#app",
+          "name": "Dentaly",
+          "alternateName": "Software Odontológico Dentaly",
+          "applicationCategory": "BusinessApplication",
+          "applicationSubCategory": "Dental Practice Management",
+          "operatingSystem": "Web, iOS, Android",
+          "url": "https://dentaly.com.ar",
+          "description": "Software odontológico 100% web para clínicas dentales argentinas. Gestioná turnos, fichas de pacientes, odontograma digital, finanzas e inventario desde cualquier dispositivo.",
+          "screenshot": "https://dentaly.com.ar/og-image.png",
+          "featureList": [
+            "Agenda de turnos online",
+            "Fichas de pacientes digitales",
+            "Odontograma digital interactivo",
+            "Gestión de finanzas y reportes",
+            "Control de inventario",
+            "Multi-profesional",
+            "Obras sociales configurables"
+          ],
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Plan Free",
+              "price": "0",
+              "priceCurrency": "ARS",
+              "description": "Gratis para siempre. 1 profesional, hasta 30 pacientes activos."
+            },
+            {
+              "@type": "Offer",
+              "name": "Plan Pro",
+              "price": "20000",
+              "priceCurrency": "ARS",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "20000",
+                "priceCurrency": "ARS",
+                "unitText": "month"
+              },
+              "description": "Profesionales y pacientes ilimitados. Soporte prioritario por WhatsApp."
+            }
+          ],
+          "provider": {
+            "@id": "https://dentaly.com.ar/#organization"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Necesito instalar algo para usar Dentaly?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Dentaly funciona 100% desde el navegador web. Solo ingresás a la URL desde tu computadora, tablet o celular y empezás a usar la aplicación. Sin instalaciones, sin actualizaciones manuales."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿El plan Free es realmente gratuito para siempre?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí. El plan Free no tiene fecha de vencimiento. Podés usar Dentaly de forma completamente gratuita con 1 profesional y hasta 30 pacientes activos, sin límite de tiempo."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Mis datos y los de mis pacientes están seguros?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Utilizamos conexiones cifradas (HTTPS) y seguimos las mejores prácticas de seguridad web. Tus datos y los de tus pacientes permanecen en tu sesión y nunca se comparten con terceros."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Puedo usar Dentaly desde el celular?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutamente. La interfaz de Dentaly es totalmente responsive y funciona en cualquier dispositivo: computadora, tablet y celular. Gestioná tu clínica desde donde estés."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuántos profesionales puede tener mi clínica?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El plan Free incluye 1 profesional. Con el plan Pro tenés profesionales ilimitados: podés agregar toda tu staff odontológica con sus especialidades, matrículas y asignación de turnos."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Puedo migrar mis datos desde Bilog u otro sistema?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí. Te asistimos con el proceso de migración de datos desde Bilog u otros sistemas de gestión dental. Contactate con nuestro equipo para coordinar el proceso sin interrumpir tu clínica."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cómo es el soporte técnico?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El plan Free cuenta con soporte por WhatsApp en horario comercial (Lun–Vie 9 a 18hs). El plan Pro incluye soporte prioritario con tiempos de respuesta reducidos."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Puedo cancelar mi suscripción cuando quiero?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí. No hay permanencia mínima ni contratos anuales forzosos. Podés cancelar tu suscripción Pro en cualquier momento desde el panel de configuración de tu cuenta."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- ── Fonts ─────────────────────────────────────────────── -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
