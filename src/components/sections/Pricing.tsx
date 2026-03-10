@@ -5,6 +5,7 @@ import { FlowButton } from '@/components/ui/flow-button';
 import { AnimatedNumber } from '@/components/ui/animated-number';
 import { AnimatedText } from '@/components/ui/animated-text';
 import { useInView } from '@/hooks/useInView';
+import { useSubscription } from '@/hooks/useSubscription';
 import { cn } from '@/lib/utils';
 
 interface PricingPlan {
@@ -27,7 +28,7 @@ const PLANS: PricingPlan[] = [
     monthlyPrice: null,
     annualMonthlyPrice: null,
     description: 'Para probar Dentaly sin compromiso. Gratis para siempre.',
-    cta: 'Empezar gratis',
+    cta: 'Solicitar demo gratuita',
     ctaVariant: 'outline',
     highlighted: false,
     features: [
@@ -50,7 +51,7 @@ const PLANS: PricingPlan[] = [
     monthlyPrice: 24000,
     annualMonthlyPrice: 20000,
     description: 'Para clínicas que quieren crecer sin límites.',
-    cta: 'Solicitar demo',
+    cta: 'Suscribirse',
     ctaVariant: 'primary',
     highlighted: true,
     features: [
@@ -152,6 +153,8 @@ function PlanCard({
   annual: boolean;
   onDemoClick: () => void;
 }) {
+  const { subscribe, loading } = useSubscription();
+
   const displayPrice = plan.monthlyPrice === null
     ? null
     : annual
@@ -159,8 +162,8 @@ function PlanCard({
     : plan.monthlyPrice;
 
   const handleCTA = () => {
-    if (plan.id === 'free') {
-      window.open('https://app.dentaly.com.ar', '_blank', 'noopener');
+    if (plan.id === 'pro') {
+      subscribe(annual ? 'annual' : 'monthly');
     } else {
       onDemoClick();
     }
@@ -179,7 +182,7 @@ function PlanCard({
       {plan.badge && (
         <div className="absolute -top-3 left-1/2 -translate-x-1/2">
           <span className="inline-flex items-center gap-1 bg-brand-accent text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
-            <Zap className="w-3 h-3" /> {plan.badge}
+            <Zap className="w-3 h-3" /> {annual ? 'Recomendado' : 'Ahorrá 2 meses con anual'}
           </span>
         </div>
       )}
@@ -250,8 +253,9 @@ function PlanCard({
         variant={plan.highlighted ? 'accent' : 'outline'}
         className="w-full justify-center"
         onClick={handleCTA}
+        disabled={plan.id === 'pro' && loading}
       >
-        {plan.cta}
+        {plan.id === 'pro' && loading ? 'Redirigiendo…' : plan.cta}
       </FlowButton>
 
       {/* Feature list */}

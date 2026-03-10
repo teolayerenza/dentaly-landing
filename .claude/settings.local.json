@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173)",
+      "Bash(where npm)",
+      "Bash(where node)",
+      "WebSearch",
+      "WebFetch(domain:mcp.mercadopago.com)",
+      "WebFetch(domain:medium.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:www.mercadopago.com.mx)",
+      "WebFetch(domain:www.mercadopago.com.br)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(test -f package.json)",
+      "Bash(where nest)",
+      "Bash(\"C:/Program Files/nodejs/npm.cmd\" install)",
+      "Bash(\"C:/Program Files/nodejs/node.exe\" -e \"const mp = require\\(''mercadopago''\\); console.log\\(Object.keys\\(mp\\)\\);\")",
+      "Bash(\"C:/Program Files/nodejs/node.exe\" -e \":*)",
+      "Bash(cp \"C:\\\\Users\\\\teola\\\\Documents\\\\DentalyApp\\\\dentaly-landing\\\\src\\\\assets\\\\screenshots\\\\dashboard.png\" \"C:\\\\Users\\\\teola\\\\Documents\\\\DentalyApp\\\\dentaly-app\\\\public\\\\screenshots\"\" && cp \"C:UsersteolaDocumentsDentalyAppdentaly-landingsrcassetsscreenshotsagenda.png\" \"C:UsersteolaDocumentsDentalyAppdentaly-apppublicscreenshots\"\")",
+      "Bash(cp \"C:\\\\Users\\\\teola\\\\Documents\\\\DentalyApp\\\\dentaly-landing\\\\src\\\\assets\\\\screenshots\\\\pacientes.png\" \"C:\\\\Users\\\\teola\\\\Documents\\\\DentalyApp\\\\dentaly-app\\\\public\\\\screenshots\"\" && cp \"C:UsersteolaDocumentsDentalyAppdentaly-landingsrcassetsscreenshotsfinanzas.png\" \"C:UsersteolaDocumentsDentalyAppdentaly-apppublicscreenshots\"\")",
+      "Bash(cp \"C:\\\\Users\\\\teola\\\\Documents\\\\DentalyApp\\\\dentaly-landing\\\\src\\\\assets\\\\screenshots\\\\odontograma.png\" \"C:\\\\Users\\\\teola\\\\Documents\\\\DentalyApp\\\\dentaly-app\\\\public\\\\screenshots\"\" && cp \"C:UsersteolaDocumentsDentalyAppdentaly-landingsrcassetsscreenshotsficha-paciente.png\" \"C:UsersteolaDocumentsDentalyAppdentaly-apppublicscreenshots\"\")",
+      "Bash(cp \"C:\\\\Users\\\\teola\\\\Documents\\\\DentalyApp\\\\dentaly-landing\\\\public\\\\favicon.svg\" \"C:\\\\Users\\\\teola\\\\Documents\\\\DentalyApp\\\\dentaly-app\\\\public\"\" && cp \"C:UsersteolaDocumentsDentalyAppdentaly-landingpublicrobots.txt\" \"C:UsersteolaDocumentsDentalyAppdentaly-apppublic\"\")",
+      "Bash(cp \"C:\\\\Users\\\\teola\\\\Documents\\\\DentalyApp\\\\dentaly-landing\\\\public\\\\sitemap.xml\" \"C:\\\\Users\\\\teola\\\\Documents\\\\DentalyApp\\\\dentaly-app\\\\public\"\" && cp \"C:UsersteolaDocumentsDentalyAppdentaly-landingpublicCNAME\" \"C:UsersteolaDocumentsDentalyAppdentaly-apppublic\"\")",
+      "Bash(npm install)",
+      "Bash(dir \"C:\\\\Users\\\\teola\\\\Documents\\\\DentalyApp\\\\dentaly-app\\\\public\\\\screenshots\")",
+      "Bash(powershell -Command \"& { $items = Get-ChildItem ''C:\\\\Users\\\\teola\\\\Documents\\\\DentalyApp\\\\dentaly-app\\\\public''; foreach \\($item in $items\\) { if \\($item.Name -match ''&&''\\) { Remove-Item -LiteralPath $item.FullName -Recurse -Force; Write-Host \\(''Removed: '' + $item.Name\\) } } }\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\teola\\\\Documents\\\\DentalyApp\\\\cleanup_public.ps1\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\teola\\\\Documents\\\\DentalyApp\\\\copy_public.ps1\")",
+      "Bash(npx tsc --noEmit)",
+      "Bash(del \"C:\\\\Users\\\\teola\\\\Documents\\\\DentalyApp\\\\cleanup_public.ps1\")",
+      "Bash(del \"C:\\\\Users\\\\teola\\\\Documents\\\\DentalyApp\\\\copy_public.ps1\")"
+    ]
+  }
+}

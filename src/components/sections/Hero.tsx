@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ArrowRight, ChevronRight, Star } from 'lucide-react';
+import { ArrowRight, ChevronRight, CreditCard, Star } from 'lucide-react';
 import { AnimatedGradient } from '@/components/ui/animated-gradient';
 import { ShimmerText } from '@/components/ui/shimmer-text';
 import { BlurReveal } from '@/components/ui/blur-reveal';
@@ -83,12 +83,13 @@ export function Hero({ onDemoClick }: HeroProps) {
                 <FlowButton
                   variant="ghost"
                   size="lg"
-                  onClick={() =>
-                    window.open('https://app.dentaly.com.ar', '_blank', 'noopener')
-                  }
+                  onClick={() => {
+                    document.getElementById('precios')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                   className="group"
                 >
-                  Empezar gratis
+                  <CreditCard className="w-4 h-4" />
+                  Ver planes y precios
                   <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                 </FlowButton>
               </div>
