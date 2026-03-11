@@ -45,8 +45,8 @@ export function Navbar({ onDemoClick }: NavbarProps) {
         {/* ── Logo ── */}
         <a href="#" className="flex items-center gap-2.5 group flex-shrink-0">
           <div className="w-8 h-8 bg-brand-primary rounded-lg flex items-center justify-center transition-colors group-hover:bg-brand-primary-l">
-            <svg viewBox="0 0 24 24" className="w-[18px] h-[18px]" fill="white">
-              <path d="M12 3c-2 0-3.8 1.1-5 2.5C5.8 6.9 5 8.5 5 10.5c0 2 .6 4.2 1.2 6l1.1 4.2c.3 1.1 1.4 1.7 2.5 1.1.5-.3 1-.4 1.7-.4.7 0 1.2.2 1.7.4 1.1.6 2.2 0 2.5-1.1l1.1-4.2c.6-1.8 1.2-4 1.2-6 0-2-.8-3.6-2-5C15.8 4.1 14 3 12 3z" />
+            <svg viewBox="0 0 120 120" className="w-[18px] h-[18px]" fill="white">
+              <path d="M30 38 C30 28 36 20 46 18 C50 17 53 20 60 20 C67 20 70 17 74 18 C84 20 90 28 90 38 C90 50 86 60 83 70 C80 80 79 92 75 98 C73 101 70 102 68 100 C65 97 64 90 60 90 C56 90 55 97 52 100 C50 102 47 101 45 98 C41 92 40 80 37 70 C34 60 30 50 30 38 Z" />
             </svg>
           </div>
           <span className="font-display font-bold text-[1.15rem] text-white tracking-tight">
