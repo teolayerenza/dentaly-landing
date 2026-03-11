@@ -30,7 +30,7 @@ export function Footer() {
                   <path d="M30 38 C30 28 36 20 46 18 C50 17 53 20 60 20 C67 20 70 17 74 18 C84 20 90 28 90 38 C90 50 86 60 83 70 C80 80 79 92 75 98 C73 101 70 102 68 100 C65 97 64 90 60 90 C56 90 55 97 52 100 C50 102 47 101 45 98 C41 92 40 80 37 70 C34 60 30 50 30 38 Z" />
                 </svg>
               </div>
-              <span className="font-display font-bold text-white text-lg">dentaly</span>
+              <span className="font-display font-bold text-white text-lg">Dentaly</span>
             </a>
             <p className="text-sm leading-relaxed max-w-[220px]">
               El sistema de gestión dental del siglo XXI para clínicas argentinas.

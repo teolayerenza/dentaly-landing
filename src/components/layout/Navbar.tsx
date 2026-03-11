@@ -50,7 +50,7 @@ export function Navbar({ onDemoClick }: NavbarProps) {
             </svg>
           </div>
           <span className="font-display font-bold text-[1.15rem] text-white tracking-tight">
-            dentaly
+            Dentaly
           </span>
         </a>
 
